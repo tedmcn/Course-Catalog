@@ -5,8 +5,18 @@ Rails.application.routes.draw do
 
   get '/course', to:"course#index"
 
+  get '/search', to:"search#index"
+
   get 'login/welcome'
 
+
+  get 'search/index'
+  post 'search/results' => 'search#results'
+
+
+  resources :course
+  resources :subject
+  resources :instructor
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -9,11 +9,23 @@
 <body>
 
 
-<div class="container">
-  <ul class="nav nav-tabs">
-  </ul>
-</div>
 
+    <nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+      <% if signed_in? %>
+        <%= link_to 'Courses', '/course', class: 'navbar-brand' %>
+        <%= link_to 'Subjects', '/subject', class: 'navbar-brand' %>
+        <%= link_to 'Instructors', '/instructor', class: 'navbar-brand' %>
+        <%= link_to 'Search', '/search', class: 'navbar-brand' %>
+      <% end %>
+    </div>
+    <div id="navbar">
+
+    </div>
+  </div>
+  </nav>
 <%= yield %>
 
 </body>

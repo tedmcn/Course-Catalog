@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20160321074822) do
   end
 
   create_table "enrollments", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

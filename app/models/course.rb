@@ -5,4 +5,8 @@ class Course < ActiveRecord::Base
   def self.search(search)
       Course.where("name LIKE ?", "%#{search}%")
   end
+
+  def create
+    
+  end
 end

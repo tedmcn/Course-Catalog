@@ -5,6 +5,7 @@
 <h1>Courses</h1>
 <ol>
   <% @course.each do |c| %>
-  <li><%= c.name %> | <%= c.code %></li>
+  <li><%= c.name %> | <%= c.code %> | <%= link_to "Enroll", {:action => "create", :controller=> "course", :course => c.id}, :method => :post %>
+  </li>
   <% end %>
 </ol>

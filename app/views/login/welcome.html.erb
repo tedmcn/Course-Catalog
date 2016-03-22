@@ -30,8 +30,8 @@
     <![endif]-->
 
 </head>
-<% if signed_in?
 <body id="page-top" class="index">
+  <% if signed_in? %>
   <% if @my_courses ==[] %>
   <h2> You have no courses, go enroll </h2>
   <% else %>

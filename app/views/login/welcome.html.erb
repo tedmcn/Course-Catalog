@@ -30,7 +30,7 @@
     <![endif]-->
 
 </head>
-
+<% if signed_in?
 <body id="page-top" class="index">
   <% if @my_courses ==[] %>
   <h2> You have no courses, go enroll </h2>
@@ -42,7 +42,7 @@
     <li><%= c.name %> | <%= c.code %>
     <% end %>
   </ol>
-
+<% end %>
 
 
 </body>

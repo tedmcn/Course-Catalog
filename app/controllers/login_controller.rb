@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+  include SessionsHelper
   def welcome
     @my_enrollements = Enrollment.where("user_id = ?", current_user.id)
     @my_courses=[];

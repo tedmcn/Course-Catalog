@@ -3,7 +3,8 @@
 </div>
 </nav>
 <h1>Courses</h1>
-<ol>
+
+<ol id="list_of_courses">
   <% @course.each do |c| %>
   <li><%= c.name %> | <%= c.code %> | <%= link_to "Enroll", {:action => "create", :controller=> "course", :course => c.id}, :method => :post %>
   </li>

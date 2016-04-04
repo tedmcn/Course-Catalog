@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'login/welcome'
 
+  get '/coursesearch', to:"coursesearch#index"
 
   get 'search/index'
   post 'search/results' => 'search#results'
